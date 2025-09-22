@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Pedro Quinto - Ginecologo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="login-form">
+                        <div class="mb-3">
+                            <label for="login-email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="login-email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="login-password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="login-password" required>
+                        </div>
+                        <div id="login-error-message" class="alert alert-danger d-none" role="alert">
+                            El email o la contraseña son incorrectos.
+                        </div>
+                        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <span>¿No tienes una cuenta?</span>
+                    <a href="registro.html" class="btn btn-link">Regístrate aquí</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="login-message" class="alert alert-warning d-none text-center">
+                        <h4 class="alert-heading text-uppercase fw-bold">Por favor, inicie sesión para hacer su consulta.</h4>
+                    </div>
+                    <form id="login-form">
+                        <div class="mb-3">
+                            <label for="login-email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="login-email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="login-password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="login-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <span>¿No tienes una cuenta?</span>
+                    <a href="registro.html" class="btn btn-link">Regístrate aquí</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">MAS TURNO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="especialidades.html">Especialidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="equipo_sanitario.html">Nuestro Equipo</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Más Info
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="https://www.paho.org/es/calendario" target="_blank">Fechas Importantes</a></li>
+                            <li><a class="dropdown-item" href="https://www.paho.org/es/temas/funciones-esenciales-salud-publica" target="_blank">Salud Pública</a></li>
+                            <li><a class="dropdown-item" href="https://www.argentina.gob.ar/sites/default/files/2016_cuidados_enfermeria_del_nino_con_sindrome_down.pdf" target="_blank">Cuidado Infantil</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+         <div class="d-flex">
+                    <button class="btn btn-outline-light me-2" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">Iniciar Sesión</button>
+                </div>
+    </nav>
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="pedro-quinto.jpg" class="card-img-top" alt="Dr. Pedro Quinto">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Dr. Pedro Quinto</h5>
+                        <p class="card-text text-muted">Ginecologo</p>
+                        <p class="card-text">Matrícula: MN 78901</p>
+                        <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#calendarModal">Solicitar Turno</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card shadow-sm p-4">
+                    <h3 class="text-secondary mb-3">Acerca de mí</h3>
+                    <p>El Dr. Pedro Quinto es un ginecólogo con amplia experiencia en salud femenina, control prenatal y planificación familiar. Se especializa en la atención integral de la mujer en todas las etapas de su vida, brindando un trato profesional y humano.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="modal fade" id="calendarModal" tabindex="-1" aria-labelledby="calendarModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="calendarModalLabel">Disponibilidad de Turnos</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="calendar-container"></div>
+            <div id="time-slots-container" class="mt-4"></div>
+            <div id="no-slots-message" class="alert alert-danger mt-3 d-none">
+                <h4 class="alert-heading text-uppercase fw-bold">Los cupos ya están todos ocupados para ese día.</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2025 MAS TURNO. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Lógica para el modal de inicio de sesión
+            let isLoggedIn = false;
+            const loginModalElement = document.getElementById('loginModal');
+            const loginModal = new bootstrap.Modal(loginModalElement);
+
+            window.showLoginModal = function() {
+                loginModal.show();
+            };
+
+            const turnoBtn = document.querySelector('[data-bs-target="#calendarModal"]');
+            turnoBtn.addEventListener('click', function(event) {
+                if (!isLoggedIn) {
+                    event.preventDefault();
+                    showLoginModal();
+                }
+            });
+
+            // Reemplazo de la lógica del script.js para que funcione en páginas individuales
+            const specialty = 'Ginecologia';
+            const availableDates = ['2025-09-24', '2025-09-29']; 
+            const availableTimes = ['10:00', '11:00', '12:00'];
+            const noSlots = false; 
+
+            const calendarContainer = document.getElementById('calendar-container');
+            const timeSlotsContainer = document.getElementById('time-slots-container');
+            const noSlotsMessage = document.getElementById('no-slots-message');
+
+            const renderCalendar = (specialty, availableDates) => {
+                const today = new Date();
+                const year = today.getFullYear();
+                const month = today.getMonth();
+
+                const firstDayOfMonth = new Date(year, month, 1).getDay();
+                const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+                let calendarHtml = `
+                    <div class="calendar-header">
+                        <button class="btn btn-sm btn-outline-secondary" disabled>&lt;</button>
+                        <span>${new Date(year, month).toLocaleString('es-ES', { month: 'long', year: 'numeric' })}</span>
+                        <button class="btn btn-sm btn-outline-secondary" disabled>&gt;</button>
+                    </div>
+                    <div class="calendar-grid">
+                        <div class="day-header">Lun</div>
+                        <div class="day-header">Mar</div>
+                        <div class="day-header">Mié</div>
+                        <div class="day-header">Jue</div>
+                        <div class="day-header">Vie</div>
+                        <div class="day-header">Sáb</div>
+                        <div class="day-header">Dom</div>
+                `;
+
+                for (let i = 0; i < firstDayOfMonth; i++) {
+                    calendarHtml += '<div></div>';
+                }
+
+                for (let day = 1; day <= daysInMonth; day++) {
+                    const date = new Date(year, month, day);
+                    const dateString = date.toISOString().split('T')[0];
+                    const isAvailable = availableDates.includes(dateString);
+                    const dayClass = isAvailable ? 'available' : 'unavailable';
+                    const dataDate = `data-date="${dateString}"`;
+                    calendarHtml += `<div class="day-cell ${dayClass}" ${dataDate}>${day}</div>`;
+                }
+                
+                calendarHtml += '</div>';
+                calendarContainer.innerHTML = calendarHtml;
+                
+                const dayCells = calendarContainer.querySelectorAll('.day-cell.available');
+                dayCells.forEach(cell => {
+                    cell.addEventListener('click', (event) => {
+                        const selectedDate = event.target.dataset.date;
+                        showTimeSlots(specialty, selectedDate);
+                    });
+                });
+            };
+
+            const showTimeSlots = (specialty, date) => {
+                timeSlotsContainer.innerHTML = '';
+                noSlotsMessage.classList.add('d-none');
+                
+                if (noSlots) {
+                    noSlotsMessage.classList.remove('d-none');
+                    return;
+                }
+
+                let scheduleHtml = `
+                    <h5>Horarios Disponibles para ${specialty} el ${date}</h5>
+                    <ul class="schedule-list">
+                `;
+                availableTimes.forEach(hour => {
+                    scheduleHtml += `
+                        <li class="schedule-item available">
+                            <span>${hour}</span>
+                            <button class="btn btn-sm btn-success" data-bs-dismiss="modal" data-time="${hour}">
+                                Reservar
+                            </button>
+                        </li>
+                    `;
+                });
+                scheduleHtml += '</ul>';
+                timeSlotsContainer.innerHTML = scheduleHtml;
+            };
+
+            document.getElementById('calendarModal').addEventListener('show.bs.modal', () => {
+                renderCalendar(specialty, availableDates);
+            });
+            
+            document.getElementById('calendarModal').addEventListener('click', (event) => {
+                if (event.target.matches('[data-time]')) {
+                    const selectedTime = event.target.dataset.time;
+                    const selectedDate = document.querySelector('.day-cell.selected').dataset.date;
+                    alert(`Simulando reserva para ${specialty} el ${selectedDate} a las ${selectedTime}hs. ¡Pronto recibirá un correo electrónico!`);
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>

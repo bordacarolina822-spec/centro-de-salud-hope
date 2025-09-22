@@ -1,0 +1,234 @@
+/* Paleta de Colores Pastel */
+:root {
+    --pastel-blue: #e0f7fa;
+    --pastel-pink: #f8bbd0;
+    --pastel-green: #dcedc8;
+    --pastel-yellow: #fff9c4;
+    --black: #000000;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--pastel-blue);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--pastel-pink);
+    border-bottom: 2px solid var(--black);
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: var(--black) !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link.active {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+}
+
+/* Botón "Acceder/Registrarse" */
+.btn-primary {
+    background-color: var(--pastel-green);
+    border-color: var(--pastel-green);
+    color: var(--black);
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: var(--pastel-yellow);
+    border-color: var(--pastel-yellow);
+}
+
+/* Carrusel */
+.carousel-item img {
+    height: 60vh;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.carousel-caption h5, .carousel-caption p {
+    color: var(--black);
+    font-weight: bold;
+}
+
+/* Alerta flotante de bienvenida */
+.floating-alert {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 600px;
+    z-index: 1050;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeInOut 5s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-50px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-50px); }
+}
+
+/* Secciones de contenido */
+.card-especialidad, .card-agente, .card {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease;
+}
+
+.card-especialidad:hover, .card-agente:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.rounded-circle {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid var(--pastel-green);
+}
+
+/* Footer */
+footer {
+    background-color: var(--black);
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #00ff00; /* Verde resaltado */
+}
+/* Estilos para el calendario de turnos */
+#calendar-container {
+    padding: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+.day-header {
+    font-weight: bold;
+    color: #555;
+}
+
+.day-cell {
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.day-cell.available {
+    background-color: #d4edda; /* Verde claro */
+    color: #155724;
+}
+
+.day-cell.available:hover {
+    background-color: #c3e6cb;
+}
+
+.day-cell.unavailable {
+    background-color: #f8d7da; /* Rojo claro */
+    color: #721c24;
+    cursor: not-allowed;
+}
+
+.day-cell.today {
+    border: 2px solid #007bff;
+}
+
+.day-info {
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+/* Modal de detalle de horarios */
+.schedule-modal-content {
+    background-color: #f8f9fa;
+}
+
+.schedule-list {
+    list-style: none;
+    padding: 0;
+}
+
+.schedule-item {
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.schedule-item.available {
+    background-color: #e2f9e4;
+    color: #0b5e28;
+}
+
+.schedule-item.unavailable {
+    background-color: #ffe6e8;
+    color: #8c1e22;
+    text-decoration: line-through;
+}
+/* Agrega esta clase para el cartel de la edad */
+.alert.custom-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+h1 {
+    font-size: 80%; /* Puedes cambiar el valor, por ejemplo, a 48px o 2.5em */
+    color: #000;
+    font-weight: bold;
+}
+h2 {
+    font-size: 80%; /* Puedes cambiar el valor, por ejemplo, a 48px o 2.5em */
+    color: #000;
+    font-weight: bold;
+}
+h3 {
+    font-size: 80%; /* Puedes cambiar el valor, por ejemplo, a 48px o 2.5em */
+    color: #000;
+    font-weight: bold;
+}
